@@ -10,13 +10,13 @@
 </mat-toolbar>
 <div *ngIf="news" class="container">
     <div class="row">
-        <div class="col-sm">
+        <div class="col">
             <app-news-item *ngFor="let storyID of newsRow1" [storyID]="storyID"></app-news-item>
         </div>
-        <div class="col-sm">
+        <div class="col">
             <app-news-item *ngFor="let storyID of newsRow2" [storyID]="storyID"></app-news-item>
         </div>
-        <div class="col-sm">
+        <div class="col">
             <app-news-item *ngFor="let storyID of newsRow3" [storyID]="storyID"></app-news-item>
         </div>
     </div>
@@ -25,14 +25,14 @@
 </mat-paginator> -->
 <div class="container">
     <div class="row">
-        <div class="col-sm">
+        <div class="col">
             <button [disabled]="range===0" (click)="previousPage()" mat-raised-button color="accent"><mat-icon>navigate_before</mat-icon></button>
         </div>
-        <div class="col-sm">
+        <div class="col">
             <span><button mat-button disabled>Page {{1 + (range/12)}} of {{(numberOfItems/12) | number:'1.0-0'}}</button></span>
         </div>
-        <div class="col-sm">
-            <button (click)="nextPage()" mat-raised-button color="accent"><mat-icon>navigate_next</mat-icon></button>
+        <div class="col">
+            <button class="float-right" (click)="nextPage()" mat-raised-button color="accent"><mat-icon>navigate_next</mat-icon></button>
         </div>
     </div>
 </div>
