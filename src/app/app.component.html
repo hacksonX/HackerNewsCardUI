@@ -23,14 +23,16 @@
 </div>
 <!-- <mat-paginator [length]="numberOfItems" [pageSize]="12" (click)="paginate()" (page)="pageEvent = $event">
 </mat-paginator> -->
-<div class="row" style="margin-left:15%">
-    <div class="col-sm">
-        <button [disabled]="range===0" (click)="previousPage()" mat-raised-button color="accent"><mat-icon>navigate_before</mat-icon></button>
-    </div>
-    <div class="col-sm">
-        <span><button mat-button disabled>Page {{1 + (range/12)}} of {{(numberOfItems/12) | number:'1.0-0'}}</button></span>
-    </div>
-    <div class="col-sm">
-        <button (click)="nextPage()" mat-raised-button color="accent"><mat-icon>navigate_next</mat-icon></button>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <button [disabled]="range===0" (click)="previousPage()" mat-raised-button color="accent"><mat-icon>navigate_before</mat-icon></button>
+        </div>
+        <div class="col-sm">
+            <span><button mat-button disabled>Page {{1 + (range/12)}} of {{(numberOfItems/12) | number:'1.0-0'}}</button></span>
+        </div>
+        <div class="col-sm">
+            <button (click)="nextPage()" mat-raised-button color="accent"><mat-icon>navigate_next</mat-icon></button>
+        </div>
     </div>
 </div>
