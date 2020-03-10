@@ -1,0 +1,18 @@
+<block-ui>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-icon mat-card-avatar class="example-header-image" aria-hidden="false" aria-label="Example menu icon">person</mat-icon>
+            <mat-card-title>{{newsItem?.type}}</mat-card-title>
+            <mat-card-subtitle>{{newsItem?.by}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="card-text">
+                {{newsItem?.title}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="goTo(newsItem?.url)">Read {{newsItem?.type}}</button>
+            <button mat-button disabled><span matBadge="{{newsItem?.score}}" matBadgeOverlap="false">Points</span></button>
+        </mat-card-actions>
+    </mat-card>
+</block-ui>
