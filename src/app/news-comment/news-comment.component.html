@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row" *ngFor="let comment of comments">
-        <div class="mb-1 pt-1" *ngIf="comment?.by">
+        <div class="mb-1 pt-1" style="min-width: 100%; background-color: gray;" *ngIf="comment?.by">
             <mat-accordion>
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -8,9 +8,9 @@
                             <mat-icon style="font-size: 20px;">perm_identity </mat-icon>{{comment.by}}
                         </mat-panel-title>
                     </mat-expansion-panel-header>
-
                     <mat-form-field>
-                        <mat-icon style="font-size: 14px;">mode_comment</mat-icon>{{comment.text}}
+                        <mat-icon style="font-size: 14px;">mode_comment</mat-icon>
+                        <p [innerHTML]="comment.text"></p>
                     </mat-form-field>
                 </mat-expansion-panel>
             </mat-accordion>
