@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
   }
 
   private loadAsGrid(news: any) {
-    let newsItems = news.slice(this.range, this.range + 12);
+    let newsItems = news.slice(this.range, this.range + 6);
     this.newsRow1 = [];
     this.newsRow2 = [];
     this.newsRow3 = [];
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
    * nextPage
    */
   public nextPage() {
-    this.range = this.range + 12;
+    this.range = this.range + 6;
     this.getNews();
   }
 
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
    */
   public previousPage() {
     if (this.range > 0) {
-      this.range = this.range - 12;
+      this.range = this.range - 6;
       this.getNews();
     }
   }
