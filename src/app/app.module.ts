@@ -18,6 +18,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { StoriesComponent } from './stories/stories.component';
 
 const routes: Routes = [
+  { path: '', component: StoriesComponent},
   { path: 'stories', component: StoriesComponent},
   { path: 'comments', component: NewsCommentComponent }
 ]
