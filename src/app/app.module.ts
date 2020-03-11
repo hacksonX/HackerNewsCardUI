@@ -13,15 +13,26 @@ import { MatCardModule } from '@angular/material/card';
 import { BlockUIModule } from 'ng-block-ui';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { NewsCommentComponent } from './news-comment/news-comment.component';
+import { Routes, RouterModule } from '@angular/router';
+import { StoriesComponent } from './stories/stories.component';
+
+const routes: Routes = [
+  { path: 'stories', component: StoriesComponent},
+  { path: 'comments', component: NewsCommentComponent }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    NewsCommentComponent,
+    StoriesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
     BlockUIModule.forRoot(),
     HttpClientModule,
     MatToolbarModule,

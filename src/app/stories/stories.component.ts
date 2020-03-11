@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { HackerNewsService } from './hacker-news.service';
+import { HackerNewsService } from '../hacker-news.service';
 import { finalize } from 'rxjs/operators';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import { NUMBER_TYPE } from '@angular/compiler/src/output/output_ast';
 import { PageEvent } from '@angular/material/paginator';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-stories',
+  templateUrl: './stories.component.html',
+  styleUrls: ['./stories.component.css']
 })
-export class AppComponent implements OnInit {
+export class StoriesComponent implements OnInit {
+
   title = 'hacker-new-card-ui';
   newsRow1 = [];
   newsRow2 = [];
@@ -90,4 +90,5 @@ export class AppComponent implements OnInit {
       this.previousPage();
     }
   }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { HackerNewsService } from '../hacker-news.service';
 import { NgBlockUI, BlockUI } from 'ng-block-ui';
 import { finalize } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-item',
@@ -11,12 +12,14 @@ import { finalize } from 'rxjs/operators';
 export class NewsItemComponent implements OnInit {
 
   newsItem: any;
+  router: Router;
 
   @Input() storyID: number;
   @BlockUI() blockUI: NgBlockUI;
 
 
-  constructor(private hackerNewsService: HackerNewsService) {
+  constructor(private hackerNewsService: HackerNewsService, private routerConfig: Router) {
+    this.router = routerConfig;
   }
 
   ngOnInit(): void {
@@ -33,6 +36,12 @@ export class NewsItemComponent implements OnInit {
   goTo(storyUrl: string): void {
     window.location.href = storyUrl;
   }
+
+  goToComment(id: any) {
+    this.router.navigate(['/comments']);
+    return;
+  }
+
 
 
 }
