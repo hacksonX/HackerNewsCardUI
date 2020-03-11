@@ -38,7 +38,7 @@ export class NewsItemComponent implements OnInit {
   }
 
   goToComment(id: any) {
-    this.router.navigate(['/comments']);
+    this.router.navigate(['/comments/'+id]);
     return;
   }
 

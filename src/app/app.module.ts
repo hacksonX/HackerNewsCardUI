@@ -16,11 +16,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { NewsCommentComponent } from './news-comment/news-comment.component';
 import { Routes, RouterModule } from '@angular/router';
 import { StoriesComponent } from './stories/stories.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 const routes: Routes = [
-  { path: '', component: StoriesComponent},
-  { path: 'stories', component: StoriesComponent},
-  { path: 'comments', component: NewsCommentComponent }
+  { path: '', component: StoriesComponent },
+  { path: 'stories', component: StoriesComponent },
+  { path: 'comments/:id', component: NewsCommentComponent }
 ]
 
 @NgModule({
@@ -42,7 +45,9 @@ const routes: Routes = [
     MatIconModule,
     MatCardModule,
     MatBadgeModule,
-    MatPaginatorModule
+    MatTreeModule,
+    MatPaginatorModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
