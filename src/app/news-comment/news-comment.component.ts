@@ -17,7 +17,6 @@ interface Comment {
 export class NewsCommentComponent implements OnInit {
 
   comments = [];
-  panelOpenState = false;
 
   constructor(private route: ActivatedRoute, private hackerNewsService: HackerNewsService) {
     this.hackerNewsService.getStory(Number(this.route.snapshot.paramMap.get('id'))).subscribe(
@@ -30,7 +29,7 @@ export class NewsCommentComponent implements OnInit {
           )
         });
       }
-    )
+    );
   }
 
   ngOnInit(): void {

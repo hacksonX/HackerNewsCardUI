@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row" *ngFor="let comment of comments">
+      <div class="mb-1 pt-1" style="min-width: 100%;" *ngIf="comment?.by">
+          <mat-accordion>
+              <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          <mat-icon style="font-size: 20px;">perm_identity </mat-icon>{{comment.by}}
+                      </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-form-field>
+                      <mat-icon style="font-size: 14px;">mode_comment</mat-icon>
+                      <p [innerHTML]="comment.text"></p>
+                  </mat-form-field>
+                  <app-news-sub-comment [kids]="comment?.kids"></app-news-sub-comment>
+              </mat-expansion-panel>
+          </mat-accordion>
+      </div>
+  </div>
+</div>

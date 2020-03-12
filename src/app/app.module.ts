@@ -18,6 +18,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { StoriesComponent } from './stories/stories.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NewsSubCommentComponent } from './news-sub-comment/news-sub-comment.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
     AppComponent,
     NewsItemComponent,
     NewsCommentComponent,
-    StoriesComponent
+    StoriesComponent,
+    NewsSubCommentComponent
   ],
   imports: [
     BrowserModule,
