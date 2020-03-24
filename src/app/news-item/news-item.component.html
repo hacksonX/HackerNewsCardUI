@@ -11,7 +11,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="accent" (click)="goTo(newsItem?.url)">Read {{newsItem?.type}}</button>
+            <a  color="accent" (click)="goTo(newsItem?.url)">Read {{newsItem?.type}}</a>
             <button mat-button disabled><span matBadge="{{newsItem?.score}}" matBadgeOverlap="false"><mat-icon>thumb_up_alt</mat-icon></span></button>
             <button mat-raised-button color="primary" matBadge="{{newsItem?.kids?.length}}" [disabled]="!newsItem?.kids" (click)="goToComment(newsItem?.id)" matBadgePosition="before" matBadgeColor="accent"><mat-icon >comment</mat-icon></button>
         </mat-card-actions>
