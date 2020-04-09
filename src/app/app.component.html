@@ -1,13 +1,15 @@
-<mat-toolbar color="primary">
-    <button mat-button>
-  <mat-icon [matMenuTriggerFor]="menu" aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
-</button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>New</button>
-        <button mat-menu-item>Past</button>
-    </mat-menu>
-    <a [routerLink]="['/stories']" style="color: white;">Hacker News</a>
-</mat-toolbar>
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title"><a [routerLink]="['/stories']" style="color: white;">Hacker
+                    News</a></span>
+        </section>
+    </div>
+</header>
+<br/>
+<br/>
+<br/>
 <div class="container">
     <router-outlet>
     </router-outlet>

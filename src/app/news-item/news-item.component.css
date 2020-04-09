@@ -6,11 +6,15 @@
 }
 
 .card-text {
-    min-height: 60px;
-    max-height: 60px;
+    min-height: 60px; max-height: 60px;
 }
 
 .example-header-image {
     font-size: 46px;
     background-size: cover;
 }
+
+
+.pointer-link { 
+    cursor: pointer; 
+  } 

@@ -19,6 +19,8 @@ import { StoriesComponent } from './stories/stories.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NewsSubCommentComponent } from './news-sub-comment/news-sub-comment.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 const routes: Routes = [
@@ -49,7 +51,8 @@ const routes: Routes = [
     MatBadgeModule,
     MatTreeModule,
     MatPaginatorModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],

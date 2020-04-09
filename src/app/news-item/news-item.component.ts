@@ -34,9 +34,7 @@ export class NewsItemComponent implements OnInit {
   }
 
   goTo(storyUrl: string): void {
-    // this.blockUI.start();
     window.open(storyUrl)
-    // window.location.href = storyUrl;
   }
 
   goToComment(id: any) {
